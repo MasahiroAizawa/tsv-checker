@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+  <meta charset="utf-8">
   <head>
     <style>
       li {
@@ -93,7 +94,7 @@
         }
         var li = document.createElement('li');
         if(errors.length == 0) errors.push('OK');
-        li.innerHTML = lines[i] + ' :: ' + errors.join(', ');
+        li.innerHTML = (i + 1) + '行：' + lines[i] + ' :: ' + errors.join(', ');
         ul.appendChild(li);
       }
       return ul.innerHTML;
